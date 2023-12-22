@@ -1,0 +1,107 @@
+body {
+    background-image: url('pic4.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  header {
+    background-color: rgba(255, 255, 255, 0.2); /* 60% opacity black */
+    color: #fff; /* Text color */
+    text-align: center; /* Aligns content to the center */
+    padding: 10px 0; /* Adds some padding around content */
+  }
+  
+  nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-around; /* Evenly distribute items */
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline; /* Displays list items horizontally */
+    margin: 0 10px; /* Adds spacing between items */
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #fff; /* Link text color */
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+
+  .neon-text {
+    color: rgb(185, 234, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Verdana, sans-serif;
+    position: relative;
+    animation: neon-animation 1.5s ease-in-out infinite alternate;
+  }
+  @keyframes neon-animation {
+    from {
+      text-shadow: 0 0 5px #00ffea, 0 0 10px #0037ff, 0 0 15px #0037ff, 0 0 20px #0037ff, 0 0 25px #0037ff, 0 0 30px #0037ff, 0 0 35px #0037ff;
+    }
+    to {
+      text-shadow: 0 0 10px #00ffea, 0 0 15px #0037ff, 0 0 20px #0037ff, 0 0 25px #0037ff, 0 0 30px #0037ff, 0 0 35px #0037ff, 0 0 40px #0037ff;
+    }
+  }
+/*but*/
+  .neon-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff; 
+    background-color: transparent;
+    border: solid 3px #00f;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s, box-shadow 0.4s;
+  }
+  .neon-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .neon-button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .neon-button:hover {
+    cursor: grabing;
+    color: #ff00ff; /* Text color changes to magenta on hover */
+    box-shadow: 0 0 20px #00f, 0 0 40px #00f, 0 0 60px #00f; /* Neon glow effect */
+  }
+  
+  /* Updated - Text Growing Effect */
+  .neon-button span {
+    display: inline-block;
+    transition: transform 0.4s;
+  }
+  
+  .neon-button:hover span {
+    transform: scale(1.2); /* Text grows to 120% of its original size */
+  }
